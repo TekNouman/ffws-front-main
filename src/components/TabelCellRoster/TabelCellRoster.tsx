@@ -6,6 +6,7 @@ import AvatarPic from 'components/AvatarPic';
 import { PlayerType } from 'typings/players';
 import ValueButton from 'components/lists/UserList/components/ValueButton';
 
+type Props = {
   player: PlayerType;
 };
 
