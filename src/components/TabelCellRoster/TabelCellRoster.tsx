@@ -5,8 +5,7 @@ import { Table, TableCellValue } from 'components/tables';
 import AvatarPic from 'components/AvatarPic';
 import { PlayerType } from 'typings/players';
 import ValueButton from 'components/lists/UserList/components/ValueButton';
-import Button from 'components';
-type Props = {
+
   player: PlayerType;
 };
 
