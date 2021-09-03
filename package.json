@@ -7,10 +7,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "devServer": "DOMAIN_SCHEME=https DOMAIN=ffws.kube1.ktsdev2.ru API_HOST=https://brave-mud-0d4292610.azurestaticapps.net/ NODE_ENV=development node bin/devServer.js",
+    "dev": "npm-run-all --parallel devServer build-lib:dev",
+    "build": "yarn build-lib && next build",
     "start": "next start",
-    "lint": "next lint"
+    "start-local": "DOMAIN_SCHEME=https DOMAIN=ffws.kube1.ktsdev2.ru API_HOST=https://brave-mud-0d4292610.azurestaticapps.net/ next start",
+    "build-lib:dev": "npx babel --watch src/lib --out-dir ./public/lib --extensions .ts",
+    "build-lib": "npx babel src/lib --out-dir ./public/lib --extensions .ts",
+    "ts-check": "tsc --skipLibCheck --noEmit --project tsconfig.json",
+    "lint-fix": "eslint --fix src",
+    "codestyle-fix": "prettier --write src\n"
   },
   "husky": {
     "hooks": {
