@@ -1,0 +1,8 @@
+include:
+  project: mnt/ci
+  file: front/ci.yaml
+
+variables:
+  BASE_DOMAIN: ffws.kube1.ktsdev2.ru
+  OVERLAY_DEV_PATH: ".kube/overlays/dev"
+  OVERLAY_DEV_MASTER_PATH: ".kube/overlays/dev-main"

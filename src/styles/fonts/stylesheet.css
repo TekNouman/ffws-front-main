@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Neue Haas Grotesk Text Pro';
+  src: url('NHaasGroteskTXPro-55Rg.woff2') format('woff2'),
+    url('NHaasGroteskTXPro-55Rg.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Text Pro';
+  src: url('NHaasGroteskTXPro-75Bd.woff2') format('woff2'),
+    url('NHaasGroteskTXPro-75Bd.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

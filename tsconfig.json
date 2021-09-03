@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "components": ["components/*"],
+      "config": ["config/*"],
+      "layouts": ["layouts/*"],
+      "images": ["images/*"],
+      "pages": ["pages/*"],
+      "styles": ["styles/*"],
+      "typings": ["typings/*"],
+      "utils": ["utils/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "typings"],
+    "strictPropertyInitialization": false,
+    "allowJs": true,
+    "noEmit": true,
+    "outDir": "./public/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strict": true,
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
