@@ -17,7 +17,7 @@ class TableCellRosterPlayer extends React.Component{
   }
   async componentDidMount(){    
    
-    const data = this.props;
+    let {data} = this.props;
  
     //console.log(data)
     this.setState({
@@ -26,7 +26,7 @@ class TableCellRosterPlayer extends React.Component{
   }
   
   render(){        
-      const RData = this.state.RData || null;     
+      let RData = this.state.RData || null;     
       
     if(Array.isArray(RData) && Object.keys(RData).length > 0){
       return null;
