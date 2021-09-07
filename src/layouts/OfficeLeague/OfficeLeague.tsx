@@ -51,7 +51,7 @@ const OfficeLeague: React.FC = () => {
       </Top>
       <FlexJustifyBetween>
         <TeamInfoCard team={mockOfficeTeam} />
-        <StandingsCard teamList={mockStandingsTeams} />
+        <StandingsCard/>
       </FlexJustifyBetween>
       <DraftBoard {...useDraftBoard(mockDraftBoards)} />
     </Page>
