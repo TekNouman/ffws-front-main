@@ -28,7 +28,7 @@ class TableCellRosterPlayer extends React.Component{
   render(){        
       const RData = this.state.RData || null;     
       
-    if(Array.isArray(RData)){
+    if(Array.isArray(RData) && Object.keys(RData).length > 0){
       return null;
     }
       console.log('RData:',RData)
@@ -39,7 +39,7 @@ class TableCellRosterPlayer extends React.Component{
 <TableCellValue flexAlign>          
        <FlexColumn>       
          {/* <PlayerNameRoster>{RData.PlayerFirstName}</PlayerNameRoster>               */}
-         <PlayerName>{RData.PlayerFirstName}</PlayerName>
+         <PlayerName>{RData.hasOwnProperty('PlayerFirstName') ? RData.PlayerFirstName : "N/A"}</PlayerName>
        
        </FlexColumn>        
        <ValueButton>OPP - {RData.PlayerOpponent}</ValueButton> 
