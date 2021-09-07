@@ -8,10 +8,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start"
-    
-    
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "husky": {
     "hooks": {
@@ -73,5 +72,4 @@
     "sass": "^1.36.0",
     "typescript": "^4.3.5"
   }
-  
 }
