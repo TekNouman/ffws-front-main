@@ -20,7 +20,7 @@ class TableCellRosterPlayer extends React.Component{
   }
   async componentDidMount(){    
    
-    let {data} = this.props;
+    const data = this.props;
  
     //console.log(data)
     this.setState({
