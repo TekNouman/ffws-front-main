@@ -18,7 +18,7 @@ class Bench extends React.Component{
     BenchData: []
   }
   async componentDidMount(){    
-    const res = await fetch(`https://ffws20210904004125.azurewebsites.net/api/Roster/GetRosterBench`)     
+    const res = await fetch(`https://localhost:44378/api/Roster/GetRosterBench`)     
     const data = await res.json()
    
     console.log(data)
