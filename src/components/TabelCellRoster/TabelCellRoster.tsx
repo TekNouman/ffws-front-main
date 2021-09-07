@@ -32,6 +32,7 @@ class TableCellRosterPlayer extends React.Component{
       
     return(      
 
+      
       <Table >
 <TableCellValue flexAlign>          
        <FlexColumn>       
