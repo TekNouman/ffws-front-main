@@ -38,7 +38,7 @@ const WaitingRoom: React.FC = () => {
         />
       </Top>
       <Info />
-      <TeamsTable setCurrentTeamID={setCurrentTeamID} />
+      <TeamsTable />
       <EditTeam
         currentTeamID={currentTeamID}
         onClose={() => setCurrentTeamID(undefined)}
