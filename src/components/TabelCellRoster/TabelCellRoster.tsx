@@ -26,13 +26,15 @@ class TableCellRosterPlayer extends React.Component{
   }
   
   render(){        
-      const {RData} = this.state;     
+      const RData = this.state.RData || null;     
       
-      // console.log(RData.PlayerFirstName)
-      
+    if(RData == null){
+      return null;
+    }
+      console.log('RData:',RData)
     return(      
 
-      
+
       <Table >
 <TableCellValue flexAlign>          
        <FlexColumn>       
