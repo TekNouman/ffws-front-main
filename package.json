@@ -5,6 +5,11 @@
   "tags": {
     "primaryResourceId": "/subscriptions/de5936d5-2bd4-4048-a43e-867231e4c934/resourcegroups/FFWS/providers/Microsoft.Web/staticSites/FFWS-FrontEnd",
     "marketplaceItemId": "Microsoft.StaticApp"
+  },"scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "properties": {
     "templateHash": "11271248454945792519",
@@ -74,6 +79,21 @@
     "validationLevel": "Template"
   },
   "dependencies": {
-    "next": "^11.1.2"
+    "next": "^11.1.2",
+    "color-hash": "^2.0.1",
+    "dayjs": "^1.10.6",
+    "formik": "^2.2.9",
+    "next": "^11.0.1",
+    "next-images": "^1.8.1",
+    "next-videos": "^1.4.0",
+    "nprogress": "^0.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-dropzone": "^11.3.4",
+    "react-indiana-drag-scroll": "^2.0.1",
+    "react-timer-hook": "^3.0.4",
+    "recharts": "^2.0.10",
+    "styled-components": "^5.3.0",
+    "yup": "^0.32.9"
   }
 }
