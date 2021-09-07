@@ -9,20 +9,22 @@ import { Wrapper, Name, Info } from './styles';
 
 class DraftLeagueCard extends React.Component{
   render(){
-    const { data } = this.props; 
-    
+    const  data  = this.props; 
+    let ddta : any = [];
+    ddta = data;
+
     return(
       <Wrapper>
-      <Name>{data.Name}</Name>
+      <Name>{ddta.Name}</Name>
        <Info>
          <div>
-           <TagButton>{isDraftFull(data.CreatedDateTime) ? 'Full' : 'Free'}</TagButton>
+           <TagButton>{isDraftFull(ddta.CreatedDateTime) ? 'Full' : 'Free'}</TagButton>
            <TagButton>
-             {data.CreatedDateTime}/{data.CreatedDateTime[1]}
+             {ddta.CreatedDateTime}/{ddta.CreatedDateTime[1]}
            </TagButton>
-           <TagButton>{dayjs(data.CreatedDateTime).format('DD MMM YYYY')}</TagButton>
+           <TagButton>{dayjs(ddta.CreatedDateTime).format('DD MMM YYYY')}</TagButton>
          </div>
-         <TagButton $action $disable={isDraftFull(data.CreatedDateTime)}>
+         <TagButton $action $disable={isDraftFull(ddta.CreatedDateTime)}>
            Enter Draft
          </TagButton>
        </Info>      
