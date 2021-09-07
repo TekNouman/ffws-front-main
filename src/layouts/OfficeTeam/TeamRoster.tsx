@@ -18,7 +18,7 @@ const TeamRoster: React.FC<Props> = ({ list }: Props) => {
           Team Roster{' '}
           <SecondaryTextColor>• {list.players.length}</SecondaryTextColor>
         </HalfCardHeader>
-        <PlayersList list={list} remove />
+        <PlayersList   />
       </Card>
     </CardWrapper>
   );
