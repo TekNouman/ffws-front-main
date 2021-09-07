@@ -28,7 +28,7 @@ class TableCellRosterPlayer extends React.Component{
   render(){        
       const RData = this.state.RData || null;     
       
-    if(RData == null){
+    if(Array.isArray(RData)){
       return null;
     }
       console.log('RData:',RData)
