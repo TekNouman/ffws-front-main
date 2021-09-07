@@ -44,7 +44,10 @@ class TeamsTable extends React.Component{
 
   render(){
 
-    const { TeamData } = this.state;
+    const  TeamData  = this.state;
+    let TD : any =[]
+    TD = TeamData
+
     return(
       <Card fullWidth withPadding color={colors.blackPanel}>
       <CardTitle>
@@ -68,18 +71,18 @@ class TeamsTable extends React.Component{
           </TableLineLabels>
         </thead>
         <tbody>
-          {TeamData.map((item, i) => (
-            <TableLineValues key={i}>
-              <TableCellValue disabled={!item.FullName}>
+          
+            <TableLineValues >
+              <TableCellValue disabled={!TD.FullName}>
                 {/* <ValueButton flexStart disabled={!item.FullName}>
                   {item.FullName}
                 </ValueButton> */}
               </TableCellValue>
-              <TableCellValue disabled={!item.FullName}>
-                {item.FullName ? (
+              <TableCellValue disabled={!TD.FullName}>
+                {TD.FullName ? (
                   <>
-                    <AvatarPic name={item.FullName} />
-                    <TeamName>Team {item.FullName}</TeamName>
+                    <AvatarPic name={TD.FullName} />
+                    <TeamName>Team {TD.FullName}</TeamName>
                     {/* {[item.manager?.id, item.team.owner?.id].includes(
                       mockAuthUser.id
                     ) && (
@@ -98,15 +101,15 @@ class TeamsTable extends React.Component{
                   <TeamName disabled>Slot Avaliable</TeamName>
                 )}
               </TableCellValue>
-              <TableCellValue disabled={!item.HeadCoach}>
+              <TableCellValue disabled={!TD.HeadCoach}>
                 {/* <ValueButton flexEnd disabled={!item.HeadCoach}>
                   {item.HeadCoach || item.HeadCoach || 'Free Spot'}
                 </ValueButton> */}
 
-<TeamName> {item.HeadCoach} </TeamName>
+<TeamName> {TD.HeadCoach} </TeamName>
               </TableCellValue>
             </TableLineValues>
-          ))}
+       
         </tbody>
       </Table>
     </Card>
