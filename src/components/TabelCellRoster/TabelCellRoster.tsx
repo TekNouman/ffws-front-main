@@ -35,7 +35,7 @@ class TableCellRosterPlayer extends React.Component{
       return null;
     }
       rda = RData
-      console.log('RData:',RData)
+     // console.log('RData:',RData)
     return(      
 
 
