@@ -96,7 +96,7 @@ const Draft: React.FC = () => {
             handleRemoveFromPickQueue={handleRemoveFromPickQueue}
             handlePlayerClick={handlePlayerClick}
           />
-          <Roster rosterList={rosterList} />
+          <Roster  />
           <RosterLimits rosterList={rosterList} />
         </Side>
         <Center>
@@ -107,7 +107,7 @@ const Draft: React.FC = () => {
           />
         </Center>
         <Side>
-          <Picks picksList={picksList} />
+          <Picks  />
           <ChatCard />
         </Side>
       </Main>
