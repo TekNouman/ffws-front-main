@@ -8,8 +8,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start"
     
     
   },
