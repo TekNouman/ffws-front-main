@@ -72,5 +72,8 @@
     ],
     "dependencies": [],
     "validationLevel": "Template"
+  },
+  "dependencies": {
+    "next": "^11.1.2"
   }
 }
