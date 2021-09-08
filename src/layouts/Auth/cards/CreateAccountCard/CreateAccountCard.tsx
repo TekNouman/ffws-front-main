@@ -20,17 +20,19 @@ import {
 import { useSignUp } from './useSignUp';
 
 const CreateAccountCard: React.FC = () => {
-  const { formik, success, loading } = useSignUp();
+  const formik = useSignUp();
 
-  if (success) {
-    return <EmailSentCard />;
-  }
+  // if (success) {
+  //   return <EmailSentCard />;
+  // }
 
   return (
+
     <Card withPadding>
+
       <CardName>Create Account</CardName>
       <FlexColumn>
-        <InputGroup>
+      <InputGroup>
           <Input
             withMargin
             label="First name"
@@ -38,9 +40,11 @@ const CreateAccountCard: React.FC = () => {
             formik={formik}
           />
           <Input label="Last name" name="family-name" formik={formik} />
-        </InputGroup>
+        </InputGroup> 
         <Input label="Email" name="email" formik={formik} />
+        <Input label="PlayerTag" name="playertag" formik={formik} />
         <Input password label="Password" name="password" formik={formik} />
+       
         <CheckboxesWrapper>
           <Checkbox
             name="terms"
@@ -66,13 +70,15 @@ const CreateAccountCard: React.FC = () => {
           <Button withMargin secondary href={routes.signin}>
             Already have an account?
           </Button>
-          <Button primary onClick={formik.submitForm} isLoading={loading}>
+          <Button primary onClick={formik.submitForm} >
             Sign Up
           </Button>
         </ButtonsGroup>
       </ButtonsWrapper>
     </Card>
-  );
+ 
+ 
+ );
 };
 
 export default React.memo(CreateAccountCard);

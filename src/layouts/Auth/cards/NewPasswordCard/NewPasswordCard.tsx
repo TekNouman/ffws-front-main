@@ -9,16 +9,26 @@ import { CardName, FlexColumn, ButtonsWrapper } from 'components/ui';
 import { useNewPassword } from './useNewPassword';
 
 const NewPasswordCard: React.FC = () => {
-  const { formik, success, loading } = useNewPassword();
+  const formik = useNewPassword();
 
-  if (success) {
-    return <EmailSentCard />;
-  }
 
   return (
     <Card withPadding>
       <CardName>New Password</CardName>
       <FlexColumn>
+      <Input
+          
+          label="Email"
+          name="email"
+          formik={formik}
+        />
+    <Input
+          
+          label="Confirmation Code"
+          name="code"
+          formik={formik}
+        />
+    
         <Input
           password
           label="New Password"
@@ -33,7 +43,7 @@ const NewPasswordCard: React.FC = () => {
         />
       </FlexColumn>
       <ButtonsWrapper>
-        <Button primary onClick={formik.submitForm} isLoading={loading}>
+        <Button primary onClick={formik.submitForm}>
           Reset Password
         </Button>
       </ButtonsWrapper>
