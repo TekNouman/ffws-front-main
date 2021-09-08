@@ -5,7 +5,8 @@
   "tags": {
     "primaryResourceId": "/subscriptions/de5936d5-2bd4-4048-a43e-867231e4c934/resourcegroups/FFWS/providers/Microsoft.Web/staticSites/FFWS-FrontEnd",
     "marketplaceItemId": "Microsoft.StaticApp"
-  },"scripts": {
+  },
+  "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -79,10 +80,11 @@
     "validationLevel": "Template"
   },
   "dependencies": {
-    "next": "^11.1.2",
+    "axios": "^0.21.4",
     "color-hash": "^2.0.1",
     "dayjs": "^1.10.6",
     "formik": "^2.2.9",
+    "next": "^11.1.2",
     "next-images": "^1.8.1",
     "next-videos": "^1.4.0",
     "nprogress": "^0.2.0",
