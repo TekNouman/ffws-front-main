@@ -90,10 +90,10 @@ class DraftPlayersList extends React.Component{
                     // onClick={() => this.props.handlePlayerClick(player.DraftPlayerId)}
                   >
                     <TableCellValue>
-                    <AvatarPic
+                    {/* <AvatarPic
                       
                        name={PD.FirstName}
-                     />
+                     /> */}
                     </TableCellValue>
                     <TableCellValue >
                       {/* <AvatarPic
