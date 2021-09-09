@@ -1,6 +1,6 @@
 import * as React from 'react';
 import dayjs from 'dayjs';
-
+import { routes } from 'config/routes';
 import { DraftType } from 'typings/drafts';
 import { TagButton } from 'components/ui';
 import { isDraftFull } from 'utils/drafts';
@@ -24,7 +24,7 @@ class DraftLeagueCard extends React.Component{
            </TagButton>
            <TagButton>{dayjs(ddta.CreatedDateTime).format('DD MMM YYYY')}</TagButton>
          </div>
-         <TagButton $action $disable={isDraftFull(ddta.CreatedDateTime)}>
+         <TagButton  $action $disable={isDraftFull(ddta.CreatedDateTime)}>
            Enter Draft
          </TagButton>
        </Info>      

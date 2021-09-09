@@ -48,7 +48,10 @@ const UserButton: React.FC<Props> = ({ user }: Props) => {
             <Link href={routes.home}>
               <InnerLink>Calendar</InnerLink>
             </Link>
-            <Button red upperCase>
+            {/* <Link href={routes.home}>
+              <InnerLink>Logout</InnerLink>
+            </Link> */}
+            <Button href={routes.signin} red upperCase>
               Log out
             </Button>
           </ButtonDropdown>

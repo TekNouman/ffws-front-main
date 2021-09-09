@@ -31,29 +31,27 @@ class Picks extends React.Component{
   }
 
   render(){
-    const  PicksData  = this.state;
-    let pdta : any = []
-    pdta = PicksData
+    const { PicksData } = this.state;
 return(
   <Wrapper>
   <InfoCard title="Picks">
     <PicksInner>
- 
-        <PlayerItem >
-          <AvatarPic  name={pdta.PlayerFirstName} />
+      {PicksData.map((player, i) => (
+        <PlayerItem key={i}>
+          <AvatarPic  name={player.PlayerFirstName} />
           <FlexColumn>
             <PlayerName>
              
               {/* <SecondaryTextColor>
                 &nbsp;{player.PlayerFirstName}
               </SecondaryTextColor> */}
-            {pdta.PlayerFirstName}
+            {player.PlayerFirstName}
 
             </PlayerName>
             <PlayerLabel></PlayerLabel>
           </FlexColumn>
         </PlayerItem>
-    
+      ))}
     </PicksInner>
   </InfoCard>
 </Wrapper>

@@ -26,7 +26,7 @@ const navLinks = [
     name: 'My Office',
   },
   {
-    href: routes.joined,
+    href: routes.signin,
     name: 'Commissioner’s Desk',
   },
   {

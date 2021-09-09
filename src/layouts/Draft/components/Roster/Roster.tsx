@@ -47,16 +47,15 @@ class Roster extends React.Component{
 
 
   render(){
-    const  RosterData  = this.state;
-    let rda : any=[]
-    rda = RosterData 
-
-
+    const { RosterData } = this.state;
+     
     return (
       <Wrapper>
         <InfoCard
           title="Roster"
-          
+          info={
+            RosterData.filter((item) => (item as PlayerType).id).length + '/16'
+          }
         >
           <TableScroll>
             <Table withPadding>
@@ -74,26 +73,28 @@ class Roster extends React.Component{
                 </TableLineLabels>
               </THeadSticky>
               <tbody>
-                
+                {RosterData.map((item, i) => {
+                  if (!(item as PlayerType).id) {
                     return (
-                      <TableLineValues >
+                      <TableLineValues key={i}>
                         <TableCellValue disabled>
-                        <AvatarPic  name={rda.PlayerFirstName} />
+                        <AvatarPic  name={item.PlayerFirstName} />
                         </TableCellValue>
 
                         <TableCellValue disabled>
                           <ValueButton flexStart uppercase>
-                            {rda.PlayerPosition}
+                            {item.PlayerPosition}
                           </ValueButton>
                         </TableCellValue>
                         <TableCellValue disabled>
-                          <PlayerName>{rda.PlayerFirstName}</PlayerName>
+                          <PlayerName>{item.PlayerFirstName}</PlayerName>
                         </TableCellValue>
                         
                                               
                       </TableLineValues>
-                    
-                  {/* // const player = item as PlayerType;
+                    );
+                  }
+                  // const player = item as PlayerType;
                   // return (
                   //   <TableLineValues key={i}>
                   //     <TableCellValue>
@@ -107,8 +108,8 @@ class Roster extends React.Component{
                   //       </FlexColumn>
                   //     </TableCellValue>
                   //   </TableLineValues>
-                  // ); */}
-                    )
+                  // );
+                })}
               </tbody>
             </Table>
           </TableScroll>
