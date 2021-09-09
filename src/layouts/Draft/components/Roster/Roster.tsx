@@ -90,6 +90,8 @@ class Roster extends React.Component{
                           <PlayerName>{rda.PlayerFirstName}</PlayerName>
                         </TableCellValue>
                         
+
+                                    
                                               
                       </TableLineValues>
                     
