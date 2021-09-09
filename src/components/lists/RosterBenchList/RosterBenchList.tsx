@@ -95,7 +95,7 @@ class RosterBenchList extends React.Component{
   
   render(){
     
-    const {data} = this.props;
+    const data = this.props;
    
    // console.log(data)
 
@@ -109,7 +109,7 @@ class RosterBenchList extends React.Component{
 
           <tbody>
 
-            <TableCellRosterPlayer {...data} data={data}/>
+            <TableCellRosterPlayer {...data} />
 
           </tbody>
         </Table>

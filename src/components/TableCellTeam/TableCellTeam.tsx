@@ -5,7 +5,7 @@ import { Table, TableCellValue } from 'components/tables';
 import AvatarPic from 'components/AvatarPic';
 import { TeamType } from 'typings/teams';
 import ValueButton from 'components/lists/UserList/components/ValueButton';
-import TableCellTeam from 'components';
+
 
 type Props = {
   team: TeamType;
@@ -13,7 +13,10 @@ type Props = {
 
 class TableCellPlayer extends React.Component{
   render(){
-    const { data } = this.props; 
+
+    let  data  = this.props; 
+    let pda: any = []
+    pda = data;
     return(
 
       
@@ -21,13 +24,13 @@ class TableCellPlayer extends React.Component{
       <Table>
 
       <TableCellValue flexAlign>        
-      <ValueButton> <AvatarPic  name={data.Name} /> </ValueButton>
+      <ValueButton> <AvatarPic  name={pda.Name} /> </ValueButton>
      
-       <TeamTableName>{data.Name}</TeamTableName>
-       <ValueButton>W ={data.Wins}</ValueButton>
-      <ValueButton>L ={data.Losses}</ValueButton>
-       <ValueButton>T ={data.Ties}</ValueButton>
-       <ValueButton>PST AGANST ={data.PointsAgainst}</ValueButton> 
+       <TeamTableName>{pda.Name}</TeamTableName>
+       <ValueButton>W ={pda.Wins}</ValueButton>
+      <ValueButton>L ={pda.Losses}</ValueButton>
+       <ValueButton>T ={pda.Ties}</ValueButton>
+       <ValueButton>PST AGANST ={pda.PointsAgainst}</ValueButton> 
       {/* <TeamTableName>{data.Wins}</TeamTableName>
       <TeamTableName>{data.Losses}</TeamTableName>
        <TeamTableName>{data.Ties}</TeamTableName>

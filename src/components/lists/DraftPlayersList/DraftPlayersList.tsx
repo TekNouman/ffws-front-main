@@ -69,8 +69,9 @@ class DraftPlayersList extends React.Component{
 
   render(){
 
-    const { PlayerData } = this.state;
-     
+    const  {PlayerData}  = this.state;
+     let PD : any =[]
+     PD = PlayerData;
     return(
       <Wrapper>
       <Card fullWidth color={colors.blackPanel}>
@@ -85,14 +86,14 @@ class DraftPlayersList extends React.Component{
                 return (
                    <TableLineValues
                     key={'player_' + i}
-                    $disable={!player.isFree}
-                    onClick={() => this.props.handlePlayerClick(player.DraftPlayerId)}
+                    // $disable={!player.isFree}
+                    // onClick={() => this.props.handlePlayerClick(player.DraftPlayerId)}
                   >
                     <TableCellValue>
-                    <AvatarPic
+                    {/* <AvatarPic
                       
-                       name={player.FirstName}
-                     />
+                       name={PD.FirstName}
+                     /> */}
                     </TableCellValue>
                     <TableCellValue >
                       {/* <AvatarPic
@@ -100,8 +101,8 @@ class DraftPlayersList extends React.Component{
                         name={player.FirstName}
                       /> */}
                       <FlexColumn>
-                        <PlayerName>{player.FirstName}</PlayerName>
-                        <PlayerLabel>{player.Position}         ,            {player.Team}</PlayerLabel>
+                        <PlayerName>{PD.FirstName}</PlayerName>
+                        <PlayerLabel>{PD.Position}         ,            {PD.Team}</PlayerLabel>
                       </FlexColumn>
                     </TableCellValue>
 

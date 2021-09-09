@@ -1,30 +1,90 @@
 {
-  "name": "ffws-front",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@gitlab.team.ktsstudio.ru:mailru-nonstandart/ffws-front.git",
-  "author": "Sergey Gromov <sendtogromov@gmail.com>",
-  "license": "MIT",
-  "private": true,
+  "id": "/subscriptions/de5936d5-2bd4-4048-a43e-867231e4c934/resourceGroups/FFWS/providers/Microsoft.Resources/deployments/Microsoft.Web-StaticApp-Portal-034a50ad-a652",
+  "name": "Microsoft.Web-StaticApp-Portal-034a50ad-a652",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "primaryResourceId": "/subscriptions/de5936d5-2bd4-4048-a43e-867231e4c934/resourcegroups/FFWS/providers/Microsoft.Web/staticSites/FFWS-FrontEnd",
+    "marketplaceItemId": "Microsoft.StaticApp"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn ts-check && yarn lint-fix && yarn codestyle-fix"
-    }
+  "properties": {
+    "templateHash": "11271248454945792519",
+    "parameters": {
+      "name": {
+        "type": "String",
+        "value": "FFWS-FrontEnd"
+      },
+      "location": {
+        "type": "String",
+        "value": "centralus"
+      },
+      "sku": {
+        "type": "String",
+        "value": "Free"
+      },
+      "skucode": {
+        "type": "String",
+        "value": "Free"
+      },
+      "repositoryUrl": {
+        "type": "String",
+        "value": "https://github.com/TekNouman/ffws-front-main"
+      },
+      "branch": {
+        "type": "String",
+        "value": "main"
+      },
+      "repositoryToken": {
+        "type": "SecureString"
+      },
+      "appLocation": {
+        "type": "String",
+        "value": "/"
+      },
+      "apiLocation": {
+        "type": "String",
+        "value": "api"
+      },
+      "appArtifactLocation": {
+        "type": "String",
+        "value": ""
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Running",
+    "timestamp": "2021-09-07T13:34:57.0905592Z",
+    "duration": "PT5.1889116S",
+    "correlationId": "615c3bcb-b43c-46c2-a8fc-b6413e261d92",
+    "providers": [
+      {
+        "namespace": "Microsoft.Web",
+        "resourceTypes": [
+          {
+            "resourceType": "staticSites",
+            "locations": [
+              "centralus"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [],
+    "validationLevel": "Template"
   },
-  "commands": [
-    "yarn build && yarn start"
-  ],
   "dependencies": {
+    "axios": "^0.21.4",
     "color-hash": "^2.0.1",
     "dayjs": "^1.10.6",
     "formik": "^2.2.9",
-    "next": "^11.0.1",
+    "next": "^11.1.2",
     "next-images": "^1.8.1",
     "next-videos": "^1.4.0",
     "nprogress": "^0.2.0",

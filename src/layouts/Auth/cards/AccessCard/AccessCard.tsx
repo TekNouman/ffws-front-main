@@ -15,12 +15,9 @@ import {
 import { useSignIn } from './useSignIn';
 
 const AccessCard: React.FC = () => {
-  const { formik, success, loading } = useSignIn();
+  const formik = useSignIn();
 
-  if (success) {
-    return <EmailSentCard />;
-  }
-
+  
   return (
     <Card withPadding>
       <CardName>Access</CardName>
@@ -33,7 +30,7 @@ const AccessCard: React.FC = () => {
           <Button withMargin secondary href={routes.signup}>
             Do not have an account?
           </Button>
-          <Button primary onClick={formik.submitForm} isLoading={loading}>
+          <Button primary onClick={formik.submitForm}>
             Log In
           </Button>
         </ButtonsGroup>

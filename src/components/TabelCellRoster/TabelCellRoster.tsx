@@ -5,11 +5,14 @@ import { Table, TableCellValue } from 'components/tables';
 import AvatarPic from 'components/AvatarPic';
 import { PlayerType } from 'typings/players';
 import ValueButton from 'components/lists/UserList/components/ValueButton';
-import Button from 'components';
+
 type Props = {
   player: PlayerType;
 };
 
+class Player{
+  PlayerFirstName: ""
+}
 
 class TableCellRosterPlayer extends React.Component{
   state = {
@@ -26,23 +29,27 @@ class TableCellRosterPlayer extends React.Component{
   }
   
   render(){        
-      const {RData} = this.state;     
-      
-      // console.log(RData.PlayerFirstName)
-      
+      let RData = this.state.RData || null;     
+      let rda : any = []
+    if(Array.isArray(RData) && Object.keys(RData).length > 0){
+      return null;
+    }
+      rda = RData
+     // console.log('RData:',RData)
     return(      
+
 
       <Table >
 <TableCellValue flexAlign>          
        <FlexColumn>       
          {/* <PlayerNameRoster>{RData.PlayerFirstName}</PlayerNameRoster>               */}
-         <PlayerName>{RData.PlayerFirstName}</PlayerName>
+         <PlayerName>{RData.hasOwnProperty('PlayerFirstName') ? rda.PlayerFirstName : "N/A"}</PlayerName>
        
        </FlexColumn>        
-       <ValueButton>OPP - {RData.PlayerOpponent}</ValueButton> 
-        <ValueButton>POS-{RData.PlayerPosition}</ValueButton>
-        <ValueButton>POINTS-{RData.Points}</ValueButton>
-       <ValueButton>BYE-{RData.PlayerByeWeek}</ValueButton>
+       <ValueButton>OPP - {rda.PlayerOpponent}</ValueButton> 
+        <ValueButton>POS-{rda.PlayerPosition}</ValueButton>
+        <ValueButton>POINTS-{rda.Points}</ValueButton>
+       <ValueButton>BYE-{rda.PlayerByeWeek}</ValueButton>
 
    </TableCellValue>  
   

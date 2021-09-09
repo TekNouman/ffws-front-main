@@ -1,1 +1,1 @@
-export { default } from './RosterBenchplayer';
+export { default } from './RosterBenchPlayer';

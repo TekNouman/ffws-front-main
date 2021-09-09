@@ -49,7 +49,7 @@ type Props = {
 
 class PlayersList extends React.Component{
   render(){
-    const {data} = this.props;
+    const data = this.props;
     
     //  console.log(data)
 
@@ -67,7 +67,7 @@ class PlayersList extends React.Component{
             
               <TableLineValues >
              
-                <TableCellPlayer {...data} data={data}  /> 
+                <TableCellPlayer {...data}   /> 
           
               </TableLineValues>
             

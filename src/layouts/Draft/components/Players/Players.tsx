@@ -23,8 +23,8 @@ const Players: React.FC<Props> = ({
     <Wrapper>
       <Search search={search} />
       <DraftPlayersList
-        playersList={playersList}
-        handlePlayerClick={handlePlayerClick}
+       
+       
       />
     </Wrapper>
   );

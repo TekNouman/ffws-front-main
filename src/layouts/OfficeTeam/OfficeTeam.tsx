@@ -92,14 +92,14 @@ const OfficeTeam: React.FC = () => {
         <TeamInfo team={mockOfficeTeam} />
         <LastWaivers lastWaivers={mockLastWaivers} waiversRef={waiversRef} />
       </FlexJustifyBetween>
-      <Roster list={mockRosterList} />
-      <Bench list={mockBenchList} />
+      <Roster  />
+      <Bench  />
       <Waivers waivers={mockWaivers} waiversRef={waiversRef} />
       <ScrollContainer horizontal className="scroll-container">
         <TablesScrollInner>
           <LeftSide>
             <Search search={playersSearch} />
-            <AvailablePlayers list={mockAvailablePlayers} />
+            <AvailablePlayers />
           </LeftSide>
           <RightSide>
             <TeamRoster list={mockAvailablePlayers} />

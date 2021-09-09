@@ -28,8 +28,11 @@ class TableCellPlayer extends React.Component{
 
     
     
-      const {APData} = this.state;
+      let APData = this.state;
+      let ad : any = []
 
+
+        ad   = APData
      // console.log(APData.Name)
 
     return(
@@ -42,15 +45,15 @@ class TableCellPlayer extends React.Component{
        {/* <AvatarPic  name={APData.Name} /> */}
        {/* <PlayerName>{APData.Name}</PlayerName>  */}
        <FlexColumn>
-         <PlayerName>{APData.Name}</PlayerName>
+         <PlayerName>{ad.Name}</PlayerName>
         
-          <PlayerLabel>{APData.Position}   {APData.Team}</PlayerLabel>
+          <PlayerLabel>{ad.Position}   {ad.Team}</PlayerLabel>
           
        </FlexColumn>
-       <ValueButton>{APData.ByeWeek}</ValueButton>
+       <ValueButton>{ad.ByeWeek}</ValueButton>
  
-          <ValueButton>{APData.UpcomingOpponent}</ValueButton>
-           <ValueButton>{APData.UpcomingProjectedPoints}</ValueButton>
+          <ValueButton>{ad.UpcomingOpponent}</ValueButton>
+           <ValueButton>{ad.UpcomingProjectedPoints}</ValueButton>
    </TableCellValue>            
     );
   }

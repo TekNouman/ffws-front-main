@@ -54,7 +54,7 @@ const renderTeams = (teams: StandingsTeamType[]): React.ReactNode => {
       <TableCellValue highlighted={k < HIGHTLIGHTED_LIST_NUMBERS}>
         <ValueButton>{k + 1}</ValueButton>
       </TableCellValue>
-      <TableCellTeam team={team.info} />
+      <TableCellTeam  />
       {renderValues(team)}
     </TableLineValues>
   ));

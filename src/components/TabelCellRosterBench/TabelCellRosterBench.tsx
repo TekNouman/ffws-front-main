@@ -17,7 +17,8 @@ class TableCellRosterBench extends React.Component{
   async componentDidMount(){    
    
     const data = this.props;
-    console.log(data)
+   
+   // console.log(data)
     
     this.setState({
       APData: data
@@ -28,10 +29,11 @@ class TableCellRosterBench extends React.Component{
 
     
     
-      const {APData} = this.state;
-
+      let APData = this.state;
+      let rda : any = []
      // console.log(APData.Name)
 
+     rda = APData;
     return(
       
 
@@ -42,15 +44,15 @@ class TableCellRosterBench extends React.Component{
        {/* <AvatarPic  name={APData.Name} /> */}
        {/* <PlayerName>{APData.Name}</PlayerName>  */}
        <FlexColumn>
-         <PlayerName>{APData.Name}</PlayerName>
+         <PlayerName>{rda.Name}</PlayerName>
         
-          <PlayerLabel>{APData.Position}   {APData.Team}</PlayerLabel>
+          <PlayerLabel>{rda.Position}   {rda.Team}</PlayerLabel>
           
        </FlexColumn>
-       <ValueButton>{APData.ByeWeek}</ValueButton>
+       <ValueButton>{rda.ByeWeek}</ValueButton>
  
-          <ValueButton>{APData.UpcomingOpponent}</ValueButton>
-           <ValueButton>{APData.UpcomingProjectedPoints}</ValueButton>
+          <ValueButton>{rda.UpcomingOpponent}</ValueButton>
+           <ValueButton>{rda.UpcomingProjectedPoints}</ValueButton>
    </TableCellValue>            
     );
   }

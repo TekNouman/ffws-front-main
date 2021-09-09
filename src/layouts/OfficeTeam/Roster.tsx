@@ -23,7 +23,7 @@ class Roster extends React.Component{
     RosterData: []
   }
   async componentDidMount(){    
-    const res = await fetch(`https://ffws20210904004125.azurewebsites.net/api/Roster/GetRoster`)     
+    const res = await fetch(`https://localhost:44378/api/Roster/GetRoster`)     
     const data = await res.json()
    
     
